@@ -5,14 +5,12 @@ public class ContaBancaria {
     private String titular;
     private float saldo;
 
-    // Construtor
     public ContaBancaria(String numero, String titular) {
         this.numero = numero;
         this.titular = titular;
         this.saldo = 0;
     }
 
-    // Getters e Setters
     public String getNumero() {
         return numero;
     }
@@ -32,8 +30,6 @@ public class ContaBancaria {
     public float getSaldo() {
         return saldo;
     }
-
-    // Métodos
     public void depositar(float valor) {
         this.saldo += valor;
     }

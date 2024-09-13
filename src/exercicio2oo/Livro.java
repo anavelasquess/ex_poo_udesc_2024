@@ -6,7 +6,6 @@ public class Livro {
     private String genero;
     private boolean disponivel;
 
-    // Construtor
     public Livro(String titulo, String autor, String genero) {
         this.titulo = titulo;
         this.autor = autor;
@@ -14,7 +13,6 @@ public class Livro {
         this.disponivel = true;
     }
 
-    // Getters e Setters
     public String getTitulo() {
         return titulo;
     }
@@ -47,7 +45,6 @@ public class Livro {
         this.disponivel = disponivel;
     }
 
-    // Métodos de emprestar e devolver
     public void emprestar() {
         if (this.disponivel) {
             this.disponivel = false;
