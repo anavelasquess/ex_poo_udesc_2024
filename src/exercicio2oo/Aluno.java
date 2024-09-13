@@ -6,7 +6,6 @@ public class Aluno {
     private int idade;
     private double n1, n2, n3, n4;
 
-    // Getters e setters simplificados
     public String getNome() {
         return nome;
     }

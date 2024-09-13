@@ -6,7 +6,6 @@ public class Carro {
     private int ano;
     private int velocidade;
 
-    // Construtor
     public Carro(String modelo, String marca, int ano) {
         this.modelo = modelo;
         this.marca = marca;
@@ -14,7 +13,6 @@ public class Carro {
         this.velocidade = 0;
     }
 
-    // Getters e setters
     public String getModelo() {
         return modelo;
     }
@@ -43,7 +41,6 @@ public class Carro {
         return velocidade;
     }
 
-    // Métodos
     public void acelerar() {
         this.velocidade += 10;
     }
