@@ -1,27 +1,58 @@
 package exercicio2oo;
 
 public class Carro {
-    public String modelo;
-    public String marca;
-    public int ano;
-    public int velocidade;
+    private String modelo;
+    private String marca;
+    private int ano;
+    private int velocidade;
 
-    public Carro(String modelo, String marca, int ano){
-        this.modelo=modelo;
-        this.marca=marca;
-        this.ano=ano;
-        this.velocidade=0;
-
-    }
-    public void acelerar(){
-        velocidade+=10;
+    // Construtor
+    public Carro(String modelo, String marca, int ano) {
+        this.modelo = modelo;
+        this.marca = marca;
+        this.ano = ano;
+        this.velocidade = 0;
     }
 
-    public void frear(){
-        velocidade=Math.max(0,velocidade-10);
-
+    // Getters e setters
+    public String getModelo() {
+        return modelo;
     }
-    public int exibirVelocidade() {
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+
+    public int getVelocidade() {
         return velocidade;
+    }
+
+    // Métodos
+    public void acelerar() {
+        this.velocidade += 10;
+    }
+
+    public void frear() {
+        this.velocidade = Math.max(0, this.velocidade - 10);
+    }
+
+    public int exibirVelocidade() {
+        return this.velocidade;
     }
 }
