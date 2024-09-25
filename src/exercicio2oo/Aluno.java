@@ -1,6 +1,7 @@
 package exercicio2oo;
 
 import exercicio1oo.TestaAluno;
+
 public class Aluno {
     private String nome;
     private int idade;

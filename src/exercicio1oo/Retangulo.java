@@ -1,16 +1,15 @@
 package exercicio1oo;
 
 public class Retangulo {
-    public float largura;
-    public float altura;
+    public double largura;
+    public double altura;
 
-
-    public Retangulo(float largura, float altura) {
+    public Retangulo(double largura, double altura) {
         this.largura = largura;
         this.altura = altura;
     }
 
-    public float calcularArea() {
-        return largura*altura;
+    public double calcularArea() {
+        return largura * altura;
     }
 }

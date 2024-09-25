@@ -30,6 +30,7 @@ public class ContaBancaria {
     public float getSaldo() {
         return saldo;
     }
+
     public void depositar(float valor) {
         this.saldo += valor;
     }
