@@ -6,6 +6,15 @@ public class Livros {
     private String genero;
     private boolean disponivel;
 
+    // Construtor sem argumentos
+    public Livros() {
+        this.titulo = "Desconhecido";
+        this.autor = "Desconhecido";
+        this.genero = "Desconhecido";
+        this.disponivel = true;
+    }
+
+    // Construtor com parâmetros
     public Livros(String titulo, String autor, String genero) {
         this.titulo = titulo;
         this.autor = autor;
@@ -41,25 +50,30 @@ public class Livros {
         return disponivel;
     }
 
-    public void setDisponivel(boolean disponivel) {
-        this.disponivel = disponivel;
-    }
-
     public void emprestar() {
         if (this.disponivel) {
             this.disponivel = false;
-            System.out.println("Livro emprestado!");
+            System.out.println("Livro emprestado: " + this.titulo);
         } else {
-            System.out.println("Livro não disponível!");
+            System.out.println("Livro não disponível para empréstimo: " + this.titulo);
         }
     }
 
     public void devolver() {
-        this.disponivel = true;
-        System.out.println("Livro devolvido!");
+        if (!this.disponivel) {
+            this.disponivel = true;
+            System.out.println("Livro devolvido: " + this.titulo);
+        } else {
+            System.out.println("Livro não estava emprestado: " + this.titulo);
+        }
     }
 
-    public boolean verificarDisponibilidade() {
-        return this.disponivel;
+    public String toString() {
+        return "Livro{" +
+                "titulo='" + titulo + '\'' +
+                ", autor='" + autor + '\'' +
+                ", genero='" + genero + '\'' +
+                ", disponivel=" + disponivel +
+                '}';
     }
 }
