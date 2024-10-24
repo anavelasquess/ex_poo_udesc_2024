@@ -5,6 +5,14 @@ public class ContaBancaria {
     private String titular;
     private float saldo;
 
+    // Construtor padrão
+    public ContaBancaria() {
+        this.numero = "";
+        this.titular = "";
+        this.saldo = 0;
+    }
+
+    // Construtor com parâmetros
     public ContaBancaria(String numero, String titular) {
         this.numero = numero;
         this.titular = titular;
@@ -32,10 +40,18 @@ public class ContaBancaria {
     }
 
     public void depositar(float valor) {
+        if (valor < 0) {
+            System.out.println("O valor do depósito não pode ser negativo!");
+            return;
+        }
         this.saldo += valor;
     }
 
     public void sacar(float valor) {
+        if (valor < 0) {
+            System.out.println("O valor do saque não pode ser negativo!");
+            return;
+        }
         if (this.saldo >= valor) {
             this.saldo -= valor;
         } else {
@@ -45,5 +61,14 @@ public class ContaBancaria {
 
     public float consultarSaldo() {
         return this.saldo;
+    }
+
+    @Override
+    public String toString() {
+        return "ContaBancaria{" +
+                "numero='" + numero + '\'' +
+                ", titular='" + titular + '\'' +
+                ", saldo=" + saldo +
+                '}';
     }
 }
