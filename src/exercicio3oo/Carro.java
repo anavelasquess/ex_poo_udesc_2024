@@ -6,6 +6,15 @@ public class Carro {
     private int ano;
     private int velocidade;
 
+    // Construtor sem argumentos
+    public Carro() {
+        this.modelo = "Desconhecido";
+        this.marca = "Desconhecida";
+        this.ano = 0;
+        this.velocidade = 0;
+    }
+
+    // Construtor com parâmetros
     public Carro(String modelo, String marca, int ano) {
         this.modelo = modelo;
         this.marca = marca;
@@ -41,6 +50,15 @@ public class Carro {
         return velocidade;
     }
 
+    // Método para definir a velocidade com verificação
+    public void setVelocidade(int velocidade) {
+        if (velocidade < 0) {
+            System.out.println("A velocidade não pode ser negativa.");
+        } else {
+            this.velocidade = velocidade;
+        }
+    }
+
     public void acelerar() {
         this.velocidade += 10;
     }
@@ -51,5 +69,15 @@ public class Carro {
 
     public int exibirVelocidade() {
         return this.velocidade;
+    }
+
+    @Override
+    public String toString() {
+        return "Carro{" +
+                "modelo='" + modelo + '\'' +
+                ", marca='" + marca + '\'' +
+                ", ano=" + ano +
+                ", velocidade=" + velocidade +
+                '}';
     }
 }
